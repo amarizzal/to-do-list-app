@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
 import './style.css'
+import Peper from "./components/Paper"
+import Paper from './components/Paper';
 
 function App() {
   return (
-    <div className="App">
-      <div className="container">
+            <Paper>
+
               <div className="frame">
                 <div className="header">
                   <button className="header-btn">Add</button>
@@ -30,9 +32,8 @@ function App() {
                   </div>
                 </div>
               </div>
-            </div>
-    </div>
-  );
+              </Paper>
+    );
 }
 
 export default App;
