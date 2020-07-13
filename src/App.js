@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import './style.css'
 
@@ -20,6 +19,12 @@ function App() {
                   </form>
                 </div>
                 <div className="to-does">
+                  <div className="to-do">
+                    <span className="to-do-text">Learning React</span>
+                  </div>
+                  <div className="to-do">
+                    <span className="to-do-text">Learning React</span>
+                  </div>
                   <div className="to-do">
                     <span className="to-do-text">Learning React</span>
                   </div>
