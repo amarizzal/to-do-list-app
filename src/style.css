@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Parisienne&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-red-color: rgb(248, 10, 10);
+}
+
+.main-red-color {
+    color: var(--main-red-color);
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+
+body, #root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+
+    height: 100vh;
+    background-color: rgb(44, 44, 38);
+}
+
+#root, .App {
+    width: 100%;
+}
+
+.container {
+    text-align: center;
+    color: rgb(44, 38, 38);
+    background-color: rgb(235, 221, 145);
+    width: 70%;
+    margin: 200px auto;
+    height: 700px;
+    border-radius: 4px;
+    padding: 32px;
+}
+
+.frame {
+    border: 2px solid rgb(255, 255, 255);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.header-btn {
+    font-size: 1.8rem;
+    font-family: 'Bungee' , sans-serif;
+
+    padding: 16px;
+
+    background-color: unset;
+    outline: unset;
+    border: unset;
+
+    cursor: pointer;
+}
+
+.header-btn:active {
+    text-shadow: 1px 1px 2px rgb(44, 44, 38);
+}
+
+.Title {
+    font-size: 3.6rem;
+    font-family: 'Parisienne';
+}
+
+.add {
+    padding: 16px;
+}
+
+.add-form {
+    display: flex;
+    font-size: 1.6em;
+    align-items: flex-start;
+}
+
+.add-form input {
+    text-transform: lowercase;
+
+    font-family: 'Parisienne';
+    font-size: 1.6em;
+
+    background-color: unset;
+    outline: unset;
+    border: unset;
+
+    flex: 1;
+
+    text-align: center;
+
+    border-bottom: 1px solid white;
+}
+
+.add-form button {
+    font-size: 1.8rem;
+    font-family: 'Bungee' , sans-serif;
+
+    padding: 24px;
+
+    background-color: unset;
+    outline: unset;
+    border: unset;
+
+    cursor: pointer;
+}
+
+.to-do {
+    position: relative;
+    flex: 1 0 auto;
+    text-align: center;
+    min-height: 34px;
+    font-family: 'Parisienne';
+    font-size: 2.4em;
+}
+
+.to-does {
+    display: flex;
+    flex-direction: column;
+}
+
+.to-do-text {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
