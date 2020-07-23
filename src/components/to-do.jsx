@@ -1,42 +1,26 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 import ToDoItem from "./to-do-item";
 
-const ToDos = () => {
-  const ex = [
-    {
-      text: "Belajar React"
-    },
-    {
-      text: "Belajar React"
-    },
-    {
-      text: "Belajar React"
-    },
-    {
-      text: "Belajar React"
-    },
-    {
-      text: "Belajar React"
-    },
-    {
-      text: "Belajar React"
-    },
-    {
-      text: "Belajar React"
-    },
-    {
-      text: "Belajar React"
-    },
-  ];
+const ToDos = ({todos}) => {
+  
 
     return (
         <div className="to-does">
-          {ex.map(todo => {
+          {todos.map(todo => {
             return <ToDoItem text={todo.text} />
           })}
         </div>
     )
 }
+
+ToDos.propTypes = {
+  todos: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string
+    })
+  )
+};
 
 export default ToDos;
