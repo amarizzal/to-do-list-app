@@ -1,18 +1,41 @@
 import React from "react";
 
+import ToDoItem from "./to-do-item";
+
 const ToDos = () => {
+  const ex = [
+    {
+      text: "Belajar React"
+    },
+    {
+      text: "Belajar React"
+    },
+    {
+      text: "Belajar React"
+    },
+    {
+      text: "Belajar React"
+    },
+    {
+      text: "Belajar React"
+    },
+    {
+      text: "Belajar React"
+    },
+    {
+      text: "Belajar React"
+    },
+    {
+      text: "Belajar React"
+    },
+  ];
+
     return (
         <div className="to-does">
-                  <div className="to-do">
-                    <span className="to-do-text">Learning React</span>
-                  </div>
-                  <div className="to-do">
-                    <span className="to-do-text">Learning React</span>
-                  </div>
-                  <div className="to-do">
-                    <span className="to-do-text">Learning React</span>
-                  </div>
-                </div>
+          {ex.map(todo => {
+            return <ToDoItem text={todo.text} />
+          })}
+        </div>
     )
 }
 
