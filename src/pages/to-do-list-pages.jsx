@@ -17,12 +17,18 @@ const ToDoListPage = () => {
         },
     ])
 
+    const addToDo = value => {
+        const addedToDo = [...todos, { text:value } ];
+
+        setTodos(addedToDo);
+    }
+
   return (
             <Paper>
 
                 <Header />
                 
-                <ToDoForm />
+                <ToDoForm addToDo={addToDo} />
                 
                 <ToDos todos={todos} />
 

@@ -8,8 +8,8 @@ const ToDos = ({todos}) => {
 
     return (
         <div className="to-does">
-          {todos.map(todo => {
-            return <ToDoItem text={todo.text} />
+          {todos.map( (todo, index) => {
+            return <ToDoItem key={index} text={todo.text} />
           })}
         </div>
     )
