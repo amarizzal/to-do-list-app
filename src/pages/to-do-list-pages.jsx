@@ -23,10 +23,19 @@ const ToDoListPage = () => {
         setTodos(addedToDo);
     }
 
+    const [showAdd, setShowAdd] = useState(false);
+
+    const showFormToggle = () => {
+        setShowAdd(!showAdd)
+        
+        console.log("showAdd" , showAdd);
+    };
+
+
   return (
             <Paper>
 
-                <Header />
+                <Header showFormToggle={showFormToggle} />
                 
                 <ToDoForm addToDo={addToDo} />
                 
