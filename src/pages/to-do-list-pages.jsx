@@ -35,9 +35,9 @@ const ToDoListPage = () => {
   return (
             <Paper>
 
-                <Header showFormToggle={showFormToggle} />
+                <Header showFormToggle={showFormToggle} showAdd={showAdd}/>
                 
-                <ToDoForm addToDo={addToDo} />
+                <ToDoForm addToDo={addToDo} showAdd={showAdd}/>
                 
                 <ToDos todos={todos} />
 
