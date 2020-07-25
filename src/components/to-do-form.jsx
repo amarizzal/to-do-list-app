@@ -15,7 +15,6 @@ const ToDoForm = ({addToDo , showAdd}) => {
       }
         
       addToDo(value);
-      alert(value); 
       setValue("");
       
     };

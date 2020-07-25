@@ -22,6 +22,11 @@ const ToDoListPage = () => {
     ])
 
     const addToDo = value => {
+
+        if(todos.length > 10) {
+            return alert('to-do-list sudah penuh :)')
+        }
+
         const addedToDo = [...todos, { text:value, isCompleted:false} ];
 
         setTodos(addedToDo);
