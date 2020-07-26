@@ -6,19 +6,6 @@ import ToDos from "../components/to-do";
 
 const ToDoListPage = () => {
     const [todos, setTodos] = useState([
-        {
-            text: "Belajar React",
-            isCompleted: false
-        },
-        {
-            text: "Belajar Flutter",
-            isCompleted: false
-
-        },
-        {
-            text: "Belajar Laravel",
-            isCompleted: false
-        },
     ])
 
     const addToDo = value => {
@@ -47,10 +34,12 @@ const ToDoListPage = () => {
 
     };
 
+    const clearToDo = () => setTodos([]);
+
   return (
             <Paper>
 
-                <Header showFormToggle={showFormToggle} showAdd={showAdd}/>
+                <Header showFormToggle={showFormToggle} showAdd={showAdd} clearToDo={clearToDo}/>
                 
                 <ToDoForm addToDo={addToDo} showAdd={showAdd}/>
                 

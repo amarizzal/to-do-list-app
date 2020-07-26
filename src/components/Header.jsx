@@ -1,14 +1,14 @@
 import React from "react";
 
-const Header = ({showFormToggle , showAdd}) => {
+import Button from './Button';
+
+const Header = ({showFormToggle , showAdd , clearToDo}) => {
     return (
         <div className="header">
-                  <button className="header-btn" onClick={showFormToggle}>
-                      {showAdd ?  'Finish' : 'Add' }
-                      </button>
-                  <h1 className="Title">To Do List</h1>
-                  <button className="header-btn main-red-color" >Clear</button>
-                </div>
+            <Button text={showAdd ?  'Finish' : 'Add' } onClick={showFormToggle}/>
+            <h1 className="Title">To Do List</h1>
+            <Button text='Clear' onClick={clearToDo} color='red' />
+        </div>
     )
 }
 
