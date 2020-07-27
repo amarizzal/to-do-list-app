@@ -8,33 +8,30 @@ import styles from './toDoForm.module.css';
 
 const ToDoForm = ({addToDo , showAdd}) => {
 
-  const classAdd = cx(styles.add);
-  const classInput = cx(styles.inputAdd);
-  const classForm = cx(styles.addForm);
-
-    const [ value, setValue ] = useState('');
-
-    const handleFormSubmit = e => {
-      e.preventDefault();
-
-      if(!value) {
-        alert('Tuliskan Kegiatan Anda');
-        return;
-      }else if(value.length > 25){
-        return alert('to-do karakter maksimal 25');
-      }
-        
-      addToDo(value);
-      setValue("");
-      
-    };
-
+  
+  const [ value, setValue ] = useState('');
+  
+  const handleFormSubmit = e => {
+    e.preventDefault();
+    
+    if(!value) {
+      alert('Tuliskan Kegiatan Anda');
+      return;
+    }else if(value.length > 25){
+      return alert('to-do karakter maksimal 25');
+    }
+    
+    addToDo(value);
+    setValue("");
+    
+  };
+  
     if(showAdd){
       return (
-        <div className={classAdd}>
-                  <form action="" className={classForm} onSubmit={handleFormSubmit}>
+        <div className={styles.add}>
+                  <form action="" className={styles.addForm} onSubmit={handleFormSubmit}>
                     <input
-                      className={classInput} 
+                      className={styles.inputAdd} 
                       type="text" 
                       value={value} 
                       onChange={e => setValue(e.target.value)}
