@@ -6,10 +6,8 @@ import styles from './toDoItem.module.css';
 
 const ToDoItem = ({text, setToDoComplete , index, isCompleted}) => {
 
-    const className = cx(styles.toDo);
-
     return (
-        <div className={className} onClick={() => setToDoComplete(index)}>
+        <div className={styles.toDo} onClick={() => setToDoComplete(index)}>
             <span style={{textDecoration: isCompleted ? 'line-through' : 'initial'}}>
                 {text}
                 </span>
