@@ -2,19 +2,14 @@ import React from "react";
 import PropTypes from 'prop-types';
 
 import ToDoItem from "../to-do-item/to-do-item";
-import cx from 'classnames';
 
 import styles from './toDo.module.css';
 
 const ToDos = ({todos, setToDoComplete}) => {
   
-  const classNameShow = cx(styles.toDoes);
-  const classNameUnshow = cx(styles.placeholderTodo);
-  const classNamePlaceholder = cx(styles.placeholderButton);
-
     if (todos.length > 0) {
       return (
-        <div className={classNameShow}>
+        <div className={styles.toDoes}>
           {todos.map( (todo, index) => {
             return <ToDoItem key={index} text={todo.text} index={index} setToDoComplete={setToDoComplete} isCompleted={todo.isCompleted}/>
           })}
@@ -22,9 +17,9 @@ const ToDos = ({todos, setToDoComplete}) => {
       )
     } else {
       return (
-        <div className={classNameUnshow}>
+        <div className={styles.placeholderTodo}>
           Tambahkan kegiatan dengan menekan tombol {" "}
-          <span className={classNamePlaceholder}>
+          <span className={styles.placeholderButton}>
             ADD
           </span>
           {" "}
