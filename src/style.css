@@ -10,9 +10,7 @@
     --main-red-color: rgb(248, 10, 10);
 }
 
-.main-red-color {
-    color: var(--main-red-color);
-}
+
 
 body,html {
     margin: 0;
@@ -57,23 +55,6 @@ body, #root {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-}
-
-.header-btn {
-    font-size: 1.8rem;
-    font-family: 'Bungee' , sans-serif;
-
-    padding: 16px;
-
-    background-color: unset;
-    outline: unset;
-    border: unset;
-
-    cursor: pointer;
-}
-
-.header-btn:active {
-    text-shadow: 1px 1px 2px rgb(44, 44, 38);
 }
 
 .Title {

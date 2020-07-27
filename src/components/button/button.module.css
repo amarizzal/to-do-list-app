@@ -1,0 +1,20 @@
+.headerBtn {
+    font-size: 1.8rem;
+    font-family: 'Bungee' , sans-serif;
+
+    padding: 16px;
+
+    background-color: unset;
+    outline: unset;
+    border: unset;
+
+    cursor: pointer;
+}
+
+.headerBtn:active {
+    text-shadow: 1px 1px 2px rgb(44, 44, 38);
+}
+
+.mainRedColor {
+    color: var(--main-red-color);
+}
