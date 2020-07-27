@@ -1,7 +1,17 @@
 import React, { useState } from "react";
 import PropTypes from 'prop-types';
+import Button from './../button/Button';
+
+import cx from 'classnames';
+
+import styles from './toDoForm.module.css';
 
 const ToDoForm = ({addToDo , showAdd}) => {
+
+  const classAdd = cx(styles.add);
+  const classInput = cx(styles.inputAdd);
+  const classForm = cx(styles.addForm);
+
     const [ value, setValue ] = useState('');
 
     const handleFormSubmit = e => {
@@ -21,14 +31,15 @@ const ToDoForm = ({addToDo , showAdd}) => {
 
     if(showAdd){
       return (
-        <div className="add">
-                  <form action="" className="add-form" onSubmit={handleFormSubmit}>
-                    <input 
+        <div className={classAdd}>
+                  <form action="" className={classForm} onSubmit={handleFormSubmit}>
+                    <input
+                      className={classInput} 
                       type="text" 
                       value={value} 
                       onChange={e => setValue(e.target.value)}
-                      />
-                    <button type="submit" className="header-btn">ADD</button>
+                    />
+                    <Button type="submit" text="Add" />
                   </form>
                 </div>
     )
