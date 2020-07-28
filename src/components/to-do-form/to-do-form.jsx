@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import PropTypes from 'prop-types';
 import Button from './../button/Button';
 
-import styles from './toDoForm.module.css';
+// import styles from './toDoForm.module.css';
+import * as styles from './to-do-form.styles';
 
 const ToDoForm = ({addToDo , showAdd}) => {
 
@@ -26,10 +27,10 @@ const ToDoForm = ({addToDo , showAdd}) => {
   
     if(showAdd){
       return (
-        <div className={styles.add}>
-                  <form action="" className={styles.addForm} onSubmit={handleFormSubmit}>
+        <div css={styles.add}>
+                  <form action="" css={styles.addForm} onSubmit={handleFormSubmit}>
                     <input
-                      className={styles.inputAdd} 
+                      css={styles.inputAdd} 
                       type="text" 
                       value={value} 
                       onChange={e => setValue(e.target.value)}
