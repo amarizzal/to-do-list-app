@@ -3,13 +3,15 @@ import PropTypes from 'prop-types';
 
 import ToDoItem from "../to-do-item/to-do-item";
 
-import styles from './toDo.module.css';
+// import styles from './toDo.module.css';
+
+import * as styles from './to-do.styles';
 
 const ToDos = ({todos, setToDoComplete}) => {
   
     if (todos.length > 0) {
       return (
-        <div className={styles.toDoes}>
+        <div css={styles.toDoes}>
           {todos.map( (todo, index) => {
             return <ToDoItem key={index} text={todo.text} index={index} setToDoComplete={setToDoComplete} isCompleted={todo.isCompleted}/>
           })}
@@ -17,9 +19,9 @@ const ToDos = ({todos, setToDoComplete}) => {
       )
     } else {
       return (
-        <div className={styles.placeholderTodo}>
+        <div css={styles.placeholderTodo}>
           Tambahkan kegiatan dengan menekan tombol {" "}
-          <span className={styles.placeholderButton}>
+          <span css={styles.placeholderButton}>
             ADD
           </span>
           {" "}
