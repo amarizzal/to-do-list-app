@@ -21,5 +21,8 @@ export const button = ({ color }) => {
         outline: unset;
         border: unset;
         cursor: pointer;
+        &:active {
+            text-shadow: 1px 1px 2px rgb(44, 44, 38);
+        }
     `
 };
