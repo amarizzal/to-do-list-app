@@ -1,5 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
+import { css } from '@emotion/core';
 import PropTypes from 'prop-types';
 
 import styles from './toDoItem.module.css';
@@ -7,7 +8,7 @@ import styles from './toDoItem.module.css';
 const ToDoItem = ({text, setToDoComplete , index, isCompleted}) => {
 
     return (
-        <div className={styles.toDo} onClick={() => setToDoComplete(index)}>
+        <div css={css`background-color: red;`} className={styles.toDo} onClick={() => setToDoComplete(index)}>
             <span style={{textDecoration: isCompleted ? 'line-through' : 'initial'}}>
                 {text}
                 </span>
